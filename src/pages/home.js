@@ -9,7 +9,7 @@ const Home = (props) => {
 	return (
 		<Fragment>
 			<div className="Home">
-				<h2>List of Characteres</h2>
+				<h2>List of Characteres and Deaths</h2>
 				<Characters />
 				<Deaths />
 			</div>

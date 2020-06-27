@@ -6,7 +6,7 @@ function CardEpisodes({ character }) {
 	return (
 		<Fragment>
 			<Card className="character">
-				<CardMedia image="https://miro.medium.com/max/1400/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" />
+				<CardMedia image="" />
 				<CardContent>
 					<p className="character_name">{character.name}</p>
 				</CardContent>

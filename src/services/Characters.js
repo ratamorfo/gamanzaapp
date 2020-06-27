@@ -34,7 +34,7 @@ class Characters extends Component {
 	sortByBirthday() {
 		const { charactersData } = this.state;
 		let newPostList = charactersData;
-		newPostList = charactersData.sort((a, b) => a.name.localeCompare(b.name));
+		newPostList = charactersData.sort((a, b) => a.birthday > b.birthday);
 		this.setState({
 			charactersData: newPostList
 		});
@@ -47,7 +47,7 @@ class Characters extends Component {
 	sortByPortrayed() {
 		const { charactersData } = this.state;
 		let newPostList = charactersData;
-		newPostList = charactersData.sort((a, b) => a.name.localeCompare(b.name));
+		newPostList = charactersData.sort((a, b) => a.portrayed.localeCompare(b.portrayed));
 		this.setState({
 			charactersData: newPostList
 		});
@@ -90,12 +90,16 @@ class Characters extends Component {
 		const { charactersData } = this.state;
 		return (
 			<div className="characters">
-				<h3>Sort By</h3>
-				<button onClick={this.toggleSortName}>Name</button>
-				<button onClick={this.toggleSortBirthday}>Birthday</button>
-				<button onClick={this.toggleSortPortrayed}>Portrayed</button>
+				<div className="sort_section">
+					<h3>Sort By</h3>
+					<button onClick={this.toggleSortName}>Name</button>
+					<button onClick={this.toggleSortBirthday}>Birthday</button>
+					<button onClick={this.toggleSortPortrayed}>Portrayed</button>
+				</div>
 				<ListCharacters characters={charactersData} />
-				<button onClick={this.loadMoreItems}>Load More</button>
+				<div className="load_more">
+					<button onClick={this.loadMoreItems}>Load More</button>
+				</div>
 			</div>
 		);
 	}

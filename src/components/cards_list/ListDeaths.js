@@ -4,9 +4,6 @@ import React, { Fragment } from 'react';
 //Components
 import CardDeaths from '../cards/CardDeaths.js';
 
-//Resources
-import '../../resources/styles/characters.css';
-
 function ListDeaths({ deaths }) {
 	return (
 		<Fragment>

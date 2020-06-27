@@ -43,6 +43,7 @@ class Deaths extends Component {
 		return (
 			<div className="deaths">
 				<p>Total Deaths: {totalDeaths}</p>
+				<h3>Deaths</h3>
 				<ListDeaths deaths={deathsData} />
 			</div>
 		);

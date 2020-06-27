@@ -4,9 +4,6 @@ import React, { Fragment } from 'react';
 //Components
 import CardCharacters from '../cards/CardCharacters.js';
 
-//Resources
-import '../../resources/styles/characters.css';
-
 function ListCharacters({ characters }) {
 	return (
 		<Fragment>
