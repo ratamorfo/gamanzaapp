@@ -2,10 +2,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-//Components
-import Home from './pages/home.js';
+// Components
 import Episodes from './pages/episodes.js';
-import App from './App.js';
+import Home from './pages/home.js';
+import App from './App';
 
 const AppRoutes = () => (
 	<App>

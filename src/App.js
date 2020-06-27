@@ -2,22 +2,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-//Components
+// Components
 import Header from './components/Header.js';
 import Content from './components/Body.js';
+
+// Menu
 import items from './components/Menu.js';
 
 class App extends Component {
 	static propTypes = {
-		content: PropTypes.array.isRequired
+		children: PropTypes.object.isRequired
 	};
 
 	render() {
-		const content = this.props;
+		const { children } = this.props;
+
 		return (
 			<div className="App">
 				<Header items={items} />
-				<Content content={content} />
+				<Content body={children} />
 			</div>
 		);
 	}

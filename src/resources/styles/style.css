@@ -1,0 +1,29 @@
+/*HEADER STYLE*/
+.header {
+	background-color: #202096;
+	display: block;
+	overflow: hidden;
+}
+.main_menu {
+	display: block;
+	overflow: hidden;
+	padding: 0px 50px;
+	margin: 15px auto;
+	width: 100%;
+}
+.main_menu li {
+	float: left;
+	list-style: none;
+}
+.main_menu a {
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+/*#Content Style*/
+.main_content {
+	margin: 0px auto;
+	padding: 0px 50px;
+}

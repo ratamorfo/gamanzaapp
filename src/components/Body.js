@@ -1,16 +1,13 @@
-// Dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Body extends Component {
 	static propTypes = {
-		content: PropTypes.array.isRequired
+		body: PropTypes.object.isRequired
 	};
-
 	render() {
-		const { content } = this.props;
-		return <div className="main_content">{content}</div>;
+		const { body } = this.props;
+		return <div className="main_content">{body}</div>;
 	}
 }
-
 export default Body;
