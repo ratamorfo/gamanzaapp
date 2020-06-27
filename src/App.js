@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//Dependencies
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Components
+import Header from './components/Header.js';
+import Content from './components/Body.js';
+import items from './components/Menu.js';
+
+class App extends Component {
+	static propTypes = {
+		content: PropTypes.array.isRequired
+	};
+
+	render() {
+		const content = this.props;
+		return (
+			<div className="App">
+				<Header items={items} />
+				<Content content={content} />
+			</div>
+		);
+	}
 }
 
 export default App;
