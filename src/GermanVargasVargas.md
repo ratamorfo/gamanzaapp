@@ -14,6 +14,7 @@ Bugs o errores identificados
 - Look and feel: Me hubiera gustado mejorar en general el "look and feel" de la aplicación. Implementando elementos de Material Design. 
 - General: Al cambiar de página entre Home y Episodes, se pierde la información y se recarga la página. Debe estar asociado al state del la lista de characters. Sin embargo, es algo que no pude resolver a tiempo. 
 - General: Existe una única hoja de estilo, esto no es correcto porque todo el CSS se cargaría siempre, aun sin ser necesario.
+- General: No está adaptada a responsive design. 
 
 
 Requerimientos que podría concluir con más tiempo
