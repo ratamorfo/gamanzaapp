@@ -1,14 +1,16 @@
 // Dependencies
 import React, { Fragment } from 'react';
-import { Card, CardMedia, CardContent } from '@material-ui/core';
+import { Card, CardContent } from '@material-ui/core';
 
-function CardDeath({ character }) {
+function CardDeath({ death }) {
 	return (
 		<Fragment>
-			<Card className="character">
-				<CardMedia image="https://miro.medium.com/max/1400/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" />
+			<Card className="death">
 				<CardContent>
-					<p className="character_name">{character.name}</p>
+					<p className="death_name">{death.death}</p>
+					<p className="death_cause">{death.cause}</p>
+					<p className="death_responsible">{death.responsible}</p>
+					<p className="death_last_words">{death.lastwords}</p>
 				</CardContent>
 			</Card>
 		</Fragment>

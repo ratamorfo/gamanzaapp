@@ -9,8 +9,9 @@ const Home = (props) => {
 	return (
 		<Fragment>
 			<div className="Home">
-				<h1>Home Page</h1>
+				<h2>List of Characteres</h2>
 				<Characters />
+				<Deaths />
 			</div>
 		</Fragment>
 	);

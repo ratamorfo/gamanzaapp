@@ -2,30 +2,50 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+//Components
+import ListDeaths from '../components/cards_list/ListDeaths.js';
+
 class Deaths extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			charactersData: []
+			deathsData: [],
+			totalDeaths: 0
 		};
 	}
 
 	componentDidMount() {
 		axios
-			.get('https://www.breakingbadapi.com/api/characters?limit=6')
+			.get('https://www.breakingbadapi.com/api/deaths')
 			.then((res) => {
-				const charactersData = res.data.results;
+				let deathsData = res.data;
+				deathsData = deathsData.slice(0, 5);
 				this.setState({
-					charactersData,
-					next: res.data.next
+					deathsData
 				});
-				console.log('Did Mount', res);
+				console.log('Deaths', res);
+			})
+			.catch(console.log);
+
+		axios
+			.get('https://www.breakingbadapi.com/api/death-count')
+			.then((res) => {
+				const totalDeaths = res.data[0].deathCount;
+				this.setState({
+					totalDeaths
+				});
 			})
 			.catch(console.log);
 	}
 
 	render() {
-		return <div className="characters" />;
+		const { deathsData, totalDeaths } = this.state;
+		return (
+			<div className="deaths">
+				<p>Total Deaths: {totalDeaths}</p>
+				<ListDeaths deaths={deathsData} />
+			</div>
+		);
 	}
 }
 
